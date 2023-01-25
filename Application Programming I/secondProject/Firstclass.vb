@@ -1,0 +1,25 @@
+﻿Public Class Firstclass
+    Private radius As Integer
+    Sub getradius()
+        Console.WriteLine("Enter the radius")
+        radius = CInt(Console.ReadLine())
+    End Sub
+
+    Function computearea() As Double
+        Dim area As Double
+        area = Math.PI * Math.Pow(radius, 2)
+        Return area
+    End Function
+
+    Function computeperimeter() As Double
+        Dim perimeter As Double
+        perimeter = Math.PI * radius * 2
+        Return perimeter
+    End Function
+
+    Sub print()
+        Console.WriteLine("Area = " & Format(computearea(), "0.00"))
+        Console.WriteLine("Perimeter = " & Format(computeperimeter(), "0.00"))
+    End Sub
+
+End Class
